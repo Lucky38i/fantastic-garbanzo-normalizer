@@ -19,7 +19,7 @@ public class Normaliser {
 
     private final List<String> jobTitles;
     private static final JaroWinklerSimilarity similarity = new JaroWinklerSimilarity();
-    private static final double THRESHOLD = 0.85;
+    private static final double THRESHOLD = 0.65;
     private record Match(String title, double score) {}
 
     /**

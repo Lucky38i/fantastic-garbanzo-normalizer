@@ -28,9 +28,15 @@ class NormaliserTest {
                 Arguments.of("Software Developer", "software engineer"),
                 Arguments.of("SOFTWARE ENGINEER", "software engineer"),
                 Arguments.of("senior software engineer", "software engineer"),
+                Arguments.of("Java engineer", "software engineer"),
+                Arguments.of("C# engineer", "software engineer"),
                 Arguments.of("lead architect", "architect"),
                 Arguments.of("junior architect", "architect"),
-                Arguments.of("architect", "architect")
+                Arguments.of("architect", "architect"),
+                Arguments.of("Chief Accountant", "accountant"),
+                Arguments.of("Lead Surveyor", "quantity surveyor"),
+                Arguments.of("ground Surveyor", "quantity surveyor"),
+                Arguments.of("quantity assessor", "quantity surveyor")
         );
     }
 
@@ -43,7 +49,8 @@ class NormaliserTest {
                 Arguments.of("Software Engineer 123", "input contains digits, was: Software Engineer 123"),
                 Arguments.of("Tech Lead", "input does not match any job title with sufficient confidence, was: 'Tech Lead', best match: 'architect' (56%)"),
                 Arguments.of("Developer", "input does not match any job title with sufficient confidence, was: 'Developer', best match: 'software engineer' (48%)"),
-                Arguments.of("这是中文", "input is empty after cleaning, was: 这是中文")
+                Arguments.of("这是中文", "input is empty after cleaning, was: 这是中文"),
+                Arguments.of("ground assessor", "input does not match any job title with sufficient confidence, was: 'ground assessor', best match: 'accountant' (58%)")
         );
     }
 
